@@ -1,5 +1,6 @@
 const form1 = document.querySelector("#form1")
 const form2 = document.querySelector("#form2")
+const form3 = document.querySelector("#form3")
 const select =document.querySelector("select")
 const ppp =document.querySelector(".ppp")
 // form1.onsubmit =(e)=>{
@@ -39,7 +40,7 @@ inputone = " "
   form2.onsubmit =(e)=>{
     e.preventDefault()
    let inputone =document.querySelector("#big-span").value
-   let inputtwo = document.querySelector("#free-hieght").value*(1/6)
+   let inputtwo =Math.round((document.querySelector("#free-hieght").value*(1/6)))
    let p1 =document.querySelector(".p4")
    if (inputone>inputtwo && inputone>50){
     p1.innerHTML=` ${inputone} يتم التكثيف علي مسافه`
@@ -50,4 +51,21 @@ inputone = " "
    }
  
 console.log(inputtwo)
+}
+
+
+form3.onsubmit =(e)=>{
+    e.preventDefault()
+   let thickness =document.querySelector("#thickness").value
+   let cover = document.querySelector("#cover").value
+   let down =document.querySelector("#down").value/10
+   let up =document.querySelector("#up").value/10
+   let watar =document.querySelector("#watar").value/10
+   let p1 =document.querySelector(".p5")
+// let result =(thickness - ((2*cover)-(2*down)-(2*up)-watar))
+let result = thickness-2*cover-2*down-2*up-watar
+let finalresult = Math.round(result*1000)/1000
+p1.innerHTML=`${finalresult}`
+
+
 }
