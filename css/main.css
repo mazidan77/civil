@@ -60,3 +60,15 @@ input{
     font-weight: bold;
     border-bottom: 2px solid;
 }
+.p5 {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid;
+}
+
+label{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
