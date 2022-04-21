@@ -1,0 +1,62 @@
+.navbar{
+    background-color: black;
+    
+}
+.navbar-brand{
+    color: white;
+}
+
+/* according */
+.form-one{
+    display: flex;
+    justify-content: center;
+}
+.one-submit{
+    margin-left: 1px;
+}
+.one-input{
+    outline:none ;
+    border: none;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.p-one {
+    align-items: center;
+    margin-top: 39px;
+    text-align: center;
+    border: 2px solid;
+}
+.title {
+    text-align: center;
+    background-color: rgb(120, 186, 240);
+    font-size: 16px;
+    font-weight: bold;
+}
+.inputs2{
+  
+margin-top: 20px;
+margin-bottom: 20px;
+
+}
+.cen{
+    display: flex;
+    justify-content: center;
+align-items: center;
+}
+input{
+    width: 50px;
+    border-radius: 6px;
+    margin: 6px
+}
+.btn {
+    /* margin: 11px; */
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.p4 {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid;
+}

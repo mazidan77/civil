@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- start nav -->
+    <nav class="navbar  ">
+        <div class="container">
+          <a class="navbar-brand " href="#">
+            <!-- <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
+            The Civil Engineer
+          </a>
+        </div>
+      </nav>
+      <!-- end nav -->
+      <div class="container col-sm-8">
+        <h3 class="mt-3 mb-3 text-center ">التسليح</h3>
+        <div class="accordion" id="accordionSection">
+            <!-- one -->
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header">
+                    <button type="button" class="accordion-button title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">حساب وزن الحديد</button></h2>
+                <div class="accordion-collapse collapse" id="collapseOne" data-bs-parent="#accordionSection">
+                    <div class="accordion-body body-one">
+                      <div class="form-one img-fluid">
+                          <form action="" id="form1">
+                            <!-- <input type="submit" class="img-fluid one-submit btn btn-primary" id="one-submit"> -->
+                           
+                          <select name="steel" id="one-input">
+                              <optgroup>
+                                <option value=""></option>
+                                  <option value="10">10ϕ</option>
+                                  <option value="12">12ϕ</option>
+                                  <option value="16">16ϕ</option>
+                                  <option value="18">18ϕ</option>
+                                  <option value="22">22ϕ</option>
+                                  <option value="25">25ϕ</option>
+                                  <option value="32">32ϕ</option>
+
+                          </optgroup>
+                        </select>
+                        <label for="steel">قطر السيخ</label>
+                          </form>
+                       
+
+                      </div>
+                      <div class="ppp">
+                        <p class="p1"></p>
+                        <p class="p2"></p>
+                        <p class="p3"></p>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- two -->
+            <div class="accordion-item  mb-3">
+                <h2 class="accordion-header">
+                    <button type="button" class="accordion-button collapsed title" data-bs-toggle="collapse" data-bs-target="#collapseTwo">مسافه تكثيف الكانات</button></h2>
+                <div class="accordion-collapse collapse " id="collapseTwo" data-bs-parent="#accordionSection">
+                    <div class="cen">
+                        <div class="inputs2  ">
+                          <form action="" id="form2">
+                            <input class="img-fluid " name="1" type="text" id="big-span">
+                            <label  for="1">البعد الاكبر للعمود بالسم</label>
+                            <br>
+                            <input class="img-fluid" name="2" type="text" id="free-hieght">
+                            <label  for="2"> الارتفاع الحر للعمود بالسم</label>
+                            <br>
+                            <button class="btn btn-primary btn">حساب مسافه التكثيف</button>
+                          </form>
+                            <p class="p4"></p>
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+            <!-- three -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button type="button" class="accordion-button collapsed title" data-bs-toggle="collapse" data-bs-target="#collapseThree">Item 3</button></h2>
+                <div class="accordion-collapse collapse" id="collapseThree" data-bs-parent="#accordionSection">
+                    <div class="accordion-body">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
