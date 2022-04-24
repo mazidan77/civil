@@ -1,9 +1,12 @@
 .navbar{
     background-color: black;
+    display: flex;
+    justify-content: center;
     
 }
 .navbar-brand{
     color: white;
+    
 }
 
 /* according */
@@ -71,4 +74,55 @@ input{
 label{
     margin-top: 10px;
     margin-bottom: 5px;
+}
+.mosatah {
+    display: none;
+ 
+}
+.mokab{
+    display: none;
+}
+.tobtitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: beige;
+    width: 100%;
+}
+form{
+    text-align: center;
+}
+.btnsbricks{
+    text-align: center;
+    margin-top: 10px;
+}
+.m2{
+    margin: 2px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    background-color: gray;
+    border-color: gray;  
+}
+
+.m3{
+    margin: 2px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    background-color: gray;
+    border-color: gray;  
+}
+.bricks{
+    background-color: rgb(32, 130, 44);
+}
+
+.tex{
+    color: white;
+    font-weight: bold;
+}
+.icon{
+    margin-left: 5px;
+}
+footer span{
+    color: #198754;
 }
