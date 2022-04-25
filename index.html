@@ -13,17 +13,21 @@
     <nav class="navbar  ">
         <div class="container">
           <a class="navbar-brand " href="#">
-            <!-- <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
+        
             The Civil Engineer
           </a>
         </div>
       </nav>
       <!-- end nav -->
       <div class="container col-sm-8">
-        <h3 class="mt-3 mb-3 text-center ">التسليح</h3>
-        <div class="accordion" id="accordionSection">
-            <!-- one -->
-            <div class="accordion-item mb-3">
+        
+        <div class="accordion " id="accordionSection">
+          <div class="">
+            <button class="mt-3 mb-3 text-center thetitle  collapsed "    id="steelBtn">التسليح</button>
+            <div class="steelDispaly " id="steelContainer">
+  
+              <!-- حساب وزن الحديد -->
+              <div class="accordion-item mb-3 ">
                 <h2 class="accordion-header">
                     <button type="button" class="accordion-button title collapsed " data-bs-toggle="collapse" data-bs-target="#collapseOne">حساب وزن الحديد</button></h2>
                 <div class="accordion-collapse collapse" id="collapseOne" data-bs-parent="#accordionSection">
@@ -32,7 +36,7 @@
                           <form action="" id="form1">
                             <!-- <input type="submit" class="img-fluid one-submit btn btn-primary" id="one-submit"> -->
                            
-                          <select name="steel" id="one-input">
+                          <select name="one-input" id="one-input">
                               <optgroup>
                                 <option value=""></option>
                                   <option value="10">10ϕ</option>
@@ -42,24 +46,87 @@
                                   <option value="22">22ϕ</option>
                                   <option value="25">25ϕ</option>
                                   <option value="32">32ϕ</option>
-
+  
                           </optgroup>
                         </select>
-                        <label for="steel">قطر السيخ</label>
+                        <label for="one-input">قطر السيخ</label>
                           </form>
                        
-
+  
                       </div>
                       <div class="ppp">
                         <p class="p1"></p>
                         <p class="p2"></p>
                         <p class="p3"></p>
+                        <p class="note" id="note"></p>
                       </div>
                     </div>
                 </div>
-
+  
             </div>
-            <!-- two -->
+             <!-- استبدال اقطار حديد التسليح -->
+             <div class="accordion-item mb-3">
+              <h2 class="accordion-header">
+                  <button type="button" class="accordion-button title collapsed " data-bs-toggle="collapse" data-bs-target="#collaps2">استبدال اقطار حديد التسليح</button></h2>
+              <div class="accordion-collapse collapse" id="collaps2" data-bs-parent="#accordionSection">
+                  <div class="accordion-body body-one">
+                  
+                    <div class="form-one img-fluid">
+  
+                    
+                      
+                        <form action="" id="form6">
+                          
+                          <input class="img-fluid center" name="numofsteel" type="text" id="numofsteel">
+                          <label  for="numofsteel">عدد الأسياخ</label>
+                          <br>
+                        <select name="steelChange" id="steelChange">
+                            <optgroup>
+                              <option value=""></option>
+                                <option value="10">10ϕ</option>
+                                <option value="12">12ϕ</option>
+                                <option value="16">16ϕ</option>
+                                <option value="18">18ϕ</option>
+                                <option value="22">22ϕ</option>
+                                <option value="25">25ϕ</option>
+                                <option value="32">32ϕ</option>
+  
+                        </optgroup>
+                       
+                      </select>
+                      <label for="steelChange"> قطر السيخ </label>
+                      <br>
+                      
+                      <select name="newsteelChange" id="newsteelChange">
+                        <optgroup>
+                          <option value=""></option>
+                            <option value="10">10ϕ</option>
+                            <option value="12">12ϕ</option>
+                            <option value="16">16ϕ</option>
+                            <option value="18">18ϕ</option>
+                            <option value="22">22ϕ</option>
+                            <option value="25">25ϕ</option>
+                            <option value="32">32ϕ</option>
+  
+                    </optgroup>
+                   
+                  </select>
+                  <label for="newsteelChange"> قطر السيخ الجديد</label>
+                  <br>
+                  <button class="btn btn-primary btn">حساب عدد الاسياخ</button>
+                        </form>
+                     
+  
+                    </div>
+                   
+                      <p class="resultnumberofsteel"></p>
+                      
+                    
+                  </div>
+              </div>
+  
+          </div>
+            <!-- مسافه تكثيف الكانات -->
             <div class="accordion-item  mb-3">
                 <h2 class="accordion-header">
                     <button type="button" class="accordion-button collapsed title " data-bs-toggle="collapse" data-bs-target="#collapseTwo">مسافه تكثيف الكانات</button></h2>
@@ -67,11 +134,11 @@
                     <div class="cen">
                         <div class="inputs2  ">
                           <form action="" id="form2">
-                            <input class="img-fluid " name="1" type="text" id="big-span">
-                            <label  for="1">البعد الاكبر للعمود بالسم</label>
+                            <input class="img-fluid " name="big-span" type="text" id="big-span">
+                            <label  for="big-span">البعد الاكبر للعمود بالسم</label>
                             <br>
-                            <input class="img-fluid" name="2" type="text" id="free-hieght">
-                            <label  for="2"> الارتفاع الحر للعمود بالسم</label>
+                            <input class="img-fluid" name="free-hieght" type="text" id="free-hieght">
+                            <label  for="free-hieght"> الارتفاع الحر للعمود بالسم</label>
                             <br>
                             <button class="btn btn-primary btn">حساب مسافه التكثيف</button>
                           </form>
@@ -81,8 +148,8 @@
                         
                     </div>
                 </div>
-
-  <!-- three -->
+  
+  <!-- حساب ارتفاع الكرسي -->
   <div class="accordion-item mb-3">
     <h2 class="accordion-header">
         <button type="button" class="accordion-button collapsed title" data-bs-toggle="collapse" data-bs-target="#collapseThree">حساب ارتفاع الكرسي</button></h2>
@@ -107,7 +174,7 @@
                         <option value="22">22ϕ</option>
                         <option value="25">25ϕ</option>
                         <option value="32">32ϕ</option>
-
+  
                 </optgroup>
               </select>
                   <label  for="down">قطر الحديد السفلي </label>
@@ -124,7 +191,7 @@
                         <option value="22">22ϕ</option>
                         <option value="25">25ϕ</option>
                         <option value="32">32ϕ</option>
-
+  
                 </optgroup>
               </select>
                   <label  for="up"> قطر الحديد العلوي</label>
@@ -140,7 +207,7 @@
                         <option value="22">22ϕ</option>
                         <option value="25">25ϕ</option>
                         <option value="32">32ϕ</option>
-
+  
                 </optgroup>
               </select>
                   <label  for="watar"> قطر سيخ الوتر </label>
@@ -151,87 +218,129 @@
               </div>
         </div>
     </div>
+  
+  </div>
+            </div>
 
-</div>
-
-  <!-- four -->
-  <div class="accordion-item  mb-3 ">
-    <h2 class="accordion-header">
-        <button type="button" class="accordion-button collapsed title " data-bs-toggle="collapse" data-bs-target="#collapseFour">عدد الطوب</button></h2>
-    <div class="accordion-collapse collapse " id="collapseFour" data-bs-parent="#accordionSection">
-      <div class="btnsbricks">
-        <button class="dismosatah m2 ">في المتر المسطح</button>
-        <button class="dismokab m3 ">في المتر المكعب</button>
-      </div>
-      
-        <div class="cen">
-          
-            <div class="mosatah  " id="display">
-              <div class="left">
-                
-                <form action="" id="form4">
-                  <p class="tobtitle"> ابعاد الطوبه بالسنتيمتر</p>
-                  <input class="img-fluid " name="1" type="number" step="0.01" id="tobatool">
-                  <label  for="1">طول الطوبه</label>
-                  <br>
-                  <input class="img-fluid" name="2" type="text" id="tobasomk">
-                  <label  for="2"> سمك الطوبه</label>
-                  <br>
-                  <p class="tobtitle">ابعاد الحائط بالمتر</p>
-                  <input class="img-fluid " name="1" type="text" id="walltool">
-                  <label  for="1">طول الحائط</label>
-                  <br>
-                  <input class="img-fluid" name="2" type="text" id="wallheight">
-                  <label  for="2"> ارتفاع الحائط</label>
-                  <br>
-                  <button class="btn btn-primary btn">حساب الكميه</button>
-                </form>
+          </div>
+         
+  
+  
+<button class="mt-3 mb-3 text-center thetitle " id="mabanyBtn">التشطيبات</button>
+<div class="mabanyDispaly" id="mabanyContainer">
+ <!-- عدد الطوب -->
+ <div class="accordion-item  mb-3 ">
+  <h2 class="accordion-header">
+      <button type="button" class="accordion-button collapsed title " data-bs-toggle="collapse" data-bs-target="#collapseFour">حساب كميات الطوب</button></h2>
+  <div class="accordion-collapse collapse " id="collapseFour" data-bs-parent="#accordionSection">
+    <div class="btnsbricks">
+      <button class="dismosatah m2 ">في المتر المسطح</button>
+      <button class="dismokab m3 ">في المتر المكعب</button>
+    </div>
+    
+      <div class="cen">
+        
+          <div class="mosatah  " id="display">
+            <div class="left">
+              
+              <form action="" id="form4">
+                <p class="tobtitle"> ابعاد الطوبه بالسنتيمتر</p>
+                <input class="img-fluid " name="tobatool" type="text" id="tobatool">
+                <label  for="tobatool">طول الطوبه</label>
+                <br>
+                <input class="img-fluid" name="tobasomk" type="text" id="tobasomk">
+                <label  for="tobasomk"> سمك الطوبه</label>
+                <br>
+                <p class="tobtitle">ابعاد الحائط بالمتر</p>
+                <input class="img-fluid " name="walltool" type="text" id="walltool">
+                <label  for="walltool">طول الحائط</label>
+                <br>
+                <input class="img-fluid" name="wallheight" type="text" id="wallheight">
+                <label  for="wallheight"> ارتفاع الحائط</label>
+                <br>
+                <button class="btn btn-primary btn">حساب الكميه</button>
+              </form>
+              <div class="center-text">
                 <p class="p6"></p>
                 <p class="p7"></p>
                 <p class="p8"></p>
                 <p class="p9"></p>
               </div>
-            
-             
+              
             </div>
-            <div class="mokab  " id="display1">
-              <div class="left">
-                
-                <form action="" id="form5">
-                  <p class="tobtitle"> ابعاد الطوبه بالسنتيمتر </p>
-                  <input class="img-fluid " name="1" type="number" step="0.01" id="tobatoolm3">
-                  <label  for="1">طول الطوبه</label>
-                  <br>
-                  <input class="img-fluid" name="2" type="text" id="tobasomkm3">
-                  <label  for="2"> سمك الطوبه</label>
-                  <br>
-                  <input class="img-fluid" name="2" type="text" id="tobaardm3">
-                  <label  for="2"> عرض الطوبه</label>
-                  <br>
-                  <p class="tobtitle">ابعاد الحائط بالمتر</p>
-                  <input class="img-fluid " name="1" type="text" id="walltoolm3">
-                  <label  for="1">طول الحائط</label>
-                  <br>
-                  <input class="img-fluid" name="2" type="text" id="wallheightm3">
-                  <label  for="2"> ارتفاع الحائط</label>
-                  <br>
-                  <input class="img-fluid" name="2" type="text" id="wallsomkm3">
-                  <label  for="2"> سمك الحائط</label>
-                  <br>
-                  <button class="btn btn-primary btn">حساب الكميه</button>
-                </form>
+          
+           
+          </div>
+          <div class="mokab  " id="display1">
+            <div class="left">
+              
+              <form action="" id="form5">
+                <p class="tobtitle"> ابعاد الطوبه بالسنتيمتر </p>
+                <input class="img-fluid " name="tobatoolm3" type="text"  id="tobatoolm3">
+                <label  for="tobatoolm3">طول الطوبه</label>
+                <br>
+                <input class="img-fluid" name="tobasomkm3" type="text" id="tobasomkm3">
+                <label  for="tobasomkm3"> سمك الطوبه</label>
+                <br>
+                <input class="img-fluid" name="tobaardm3" type="text" id="tobaardm3">
+                <label  for="tobaardm3"> عرض الطوبه</label>
+                <br>
+                <p class="tobtitle">ابعاد الحائط بالمتر</p>
+                <input class="img-fluid " name="walltoolm3" type="text" id="walltoolm3">
+                <label  for="walltoolm3">طول الحائط</label>
+                <br>
+                <input class="img-fluid" name="wallheightm3" type="text" id="wallheightm3">
+                <label  for="wallheightm3"> ارتفاع الحائط</label>
+                <br>
+                <input class="img-fluid" name="wallsomkm3" type="text" id="wallsomkm3">
+                <label  for="wallsomkm3"> سمك الحائط</label>
+                <br>
+                <button class="btn btn-primary btn">حساب الكميه</button>
+              </form>
+              <div class="center-text">
                 <p class="p10"></p>
                 <p class="p11"></p>
                 <p class="p12"></p>
                 <p class="p13"></p>
               </div>
-            
+      
              
             </div>
-        </div>
-            
+          
+           
+          </div>
+      </div>
+          
+      </div>
+  </div>
+
+  <!-- كميه المحاره -->
+  <div class="accordion-item mb-3">
+    <h2 class="accordion-header">
+        <button type="button" class="accordion-button collapsed title" data-bs-toggle="collapse" data-bs-target="#collapseFive">حساب كميات المحاره</button></h2>
+    <div class="accordion-collapse collapse" id="collapseFive" data-bs-parent="#accordionSection">
+        <div class="accordion-body cen">
+            <div class="inputs2  ">
+                <form action="" id="form7">
+                  <input class="img-fluid thickness" name="areaceling" type="text" id="areaceling">
+                  <label  for="areaceling"> مساحه المسطح بالمتر المربع</label>
+                  <br>
+                 
+                  <button class="btn btn-primary btn">حساب الكميات</button>
+                </form>
+                <div class="center-text">
+                  <p class="cement"></p>
+                  <p class="water"></p>
+                  <p class="sand"></p>
+                </div>
+                  
+              </div>
         </div>
     </div>
+  
+  </div>
+</div>
+ 
 
 
 
