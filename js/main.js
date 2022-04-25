@@ -3,36 +3,54 @@ const form2 = document.querySelector("#form2");
 const form3 = document.querySelector("#form3");
 const form4 = document.querySelector("#form4");
 const form5 = document.querySelector("#form5");
+const form6 = document.querySelector("#form6");
+const form7= document.querySelector("#form7");
 const select = document.querySelector("select");
 const ppp = document.querySelector(".ppp");
 let buttonm2 = document.querySelector(".dismosatah")
 let buttonm3 = document.querySelector(".dismokab")
 
 
+// toggle steel container
+
+
+let mabanyBtn = document.querySelector("#mabanyBtn");
+mabanyBtn.onclick = function(eo){
+// mabanyBtn.style.transitio ="all 2s"
+  let mabanyBtn = document.querySelector("#mabanyBtn");
+let mabanyContainer = document.querySelector("#mabanyContainer");
+mabanyContainer.classList.toggle("mabanyDispaly")
+mabanyBtn.classList.toggle("greenBackground")
+}
+
+// toggle mabany  container
+
+steelBtn.onclick = function(eo){
+  let steelBtn = document.querySelector("#steelBtn");
+let steelContainer = document.querySelector("#steelContainer");
+  steelContainer.classList.toggle("steelDispaly")
+  steelBtn.classList.toggle("greenBackground")
+}
+// التنقل بين الطوب بالمتر المسطح والمكعب
+
 var element1 = document.getElementById("display")
 var element = document.getElementById("display1")
 buttonm2.onclick = function(eo){
  buttonm2.classList.add("bricks")
  buttonm3.classList.remove("bricks")
-// element1.classList.toggle("mosatah")
+
 element1.classList.remove("mosatah")
 element.classList.add("mokab")
-if  (element1.classList.remove("mosatah")){
-   element.classList.add("mokab")
-  
-}
+
  
 }
 buttonm3.onclick = function(eo){
    buttonm3.classList.add("bricks")
    buttonm2.classList.remove("bricks")
-   // element.classList.toggle("mokab")
+   
    element.classList.remove("mokab")
    element1.classList.add("mosatah")
-if  (element.classList.remove("mokab")){
-   element1.classList.add("mosatah")
-  
-}
+
  
 }
 
@@ -53,6 +71,10 @@ if  (element.classList.remove("mokab")){
 // inputone = " "
 // }
 
+
+
+
+// حساب وزن الحديد
 select.addEventListener("input", updateValue);
 function updateValue(e) {
   let inputone = document.querySelector("#one-input").value;
@@ -67,9 +89,23 @@ function updateValue(e) {
   p1.innerHTML = `${weightOfOneMeter}=وزن المتر الطولي ل حديد قطر  ${inputone}`;
   p2.innerHTML = `${weightOf12m} وزن السيخ طوله 12 متر هو `;
   p3.innerHTML = `  ${numeber} =عدد الاسياخ في الطن  `;
+  note.innerHTML = `وزن المتر الطولي = القطر تربيع /162`
   inputone = " ";
 }
 
+//  استبدال اقطار حديد التسليح
+form6.onsubmit = (e) => {
+  e.preventDefault();
+  let numberofsteel =document.querySelector("#numofsteel").value 
+  let steel = document.querySelector("#steelChange").value
+  let newsteel = document.querySelector("#newsteelChange").value
+  let result =  Math.round( (numberofsteel*steel*steel)/(newsteel*newsteel))
+  let p1 = document.querySelector(".resultnumberofsteel");
+  p1.innerHTML = `${result } =عدد الاساخ الجديده `;
+  console.log(result)
+ }
+
+// مسافه تكثيف الكانات
 form2.onsubmit = (e) => {
   e.preventDefault();
   let inputone = document.querySelector("#big-span").value;
@@ -88,6 +124,9 @@ form2.onsubmit = (e) => {
   console.log(inputtwo);
 };
 
+
+
+// حساب ارتفاع الكرسي
 form3.onsubmit = (e) => {
   e.preventDefault();
   let thickness = document.querySelector("#thickness").value;
@@ -101,6 +140,10 @@ form3.onsubmit = (e) => {
   let finalresult = Math.round(result * 1000) / 1000;
   p1.innerHTML = `${finalresult}`;
 };
+
+
+
+// عدد الطوب متر مسطح 
 form4.onsubmit = (e) => {
   e.preventDefault();
   let tooleltoba = (parseFloat(document.querySelector("#tobatool").value)+1)/100;
@@ -116,11 +159,14 @@ form4.onsubmit = (e) => {
   let p3 =document.querySelector(".p8");
   let p4 = document.querySelector(".p9");
  console.log(cement)
-  p1.innerHTML = `${result } = عدد الطوب بعد حساب نسبه الهالك `;
-  p2.innerHTML = ` ${cement } =  كميه الاسمنت اللازمه بال كجم `;
-  p3.innerHTML = ` ${ water } =  كميه المياه اللازمه بال باللتر `;
-  p4.innerHTML = ` ${ sand } =  كميه الرمل اللازمه بال بالمتر `;
+  
+  p1.innerHTML = `عددالطوب بعد حساب نسبه الهالك = ${result} طوبه`;
+   p2.innerHTML = ` كميه الاسمنت اللازمه = ${cement} كجم`;
+   p3.innerHTML = ` كميه المياه اللازمه = ${water} لتر `;
+   p4.innerHTML = ` كميه الرمل اللازمه = ${sand} متر`;
 };
+
+// عدد الطوب متر مكعب
 form5.onsubmit = (e) => {
    e.preventDefault();
    let tooleltoba = (parseFloat(document.querySelector("#tobatoolm3").value)+1)/100;
@@ -139,9 +185,30 @@ form5.onsubmit = (e) => {
    let p2 =document.querySelector(".p11");
    let p3 =document.querySelector(".p12");
    let p4 = document.querySelector(".p13");
-  console.log(cement)
-   p1.innerHTML = `${result } = عدد الطوب بعد حساب نسبه الهالك `;
-   p2.innerHTML = ` ${cement } =  كميه الاسمنت اللازمه بال كجم `;
-   p3.innerHTML = ` ${ water } =  كميه المياه اللازمه بال باللتر `;
-   p4.innerHTML = ` ${ sand } =  كميه الرمل اللازمه بال بالمتر `;
+
+  
+   p1.innerHTML = `عددالطوب بعد حساب نسبه الهالك = ${result} طوبه`;
+   p2.innerHTML = ` كميه الاسمنت اللازمه = ${cement} كجم`;
+   p3.innerHTML = ` كميه المياه اللازمه = ${water} لتر `;
+   p4.innerHTML = ` كميه الرمل اللازمه = ${sand} متر`;
  };
+ // :كميه المحاره 
+form7.onsubmit = (e) => {
+  e.preventDefault();
+let areaceling = document.querySelector("#areaceling").value
+let cement =Math.round((areaceling/6)*10)/10 
+let cementinkg =Math.round( (areaceling*50/6)*10)/10
+let water = cementinkg / 2
+let sand = Math.round(( 1*cement/6)*100)/100
+
+  let pCement = document.querySelector(".cement")
+  let pSand = document.querySelector(".sand")
+  let pWater= document.querySelector(".water")
+
+ pCement.innerHTML = `كميه الاسمنت اللازمه = ${cementinkg} كجم = ${cement} شكاره`;
+ pSand.innerHTML = ` كميه الرمل اللازمه  =${sand} متر `;
+ pWater.innerHTML = ` كميه المياه اللازمه = ${water} لتر `;
+
+};
+
+
